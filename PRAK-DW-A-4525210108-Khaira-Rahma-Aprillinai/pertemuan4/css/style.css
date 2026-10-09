@@ -1,0 +1,48 @@
+/* ===== VERSI SEBELUM (rekonstruksi) ===== */
+body {
+  font-family: Arial, sans-serif;
+  color: #222222;
+  background-color: #f4f6f9;
+  margin: 0;
+}
+
+header {
+  background-color: #366da3;
+  color: #ffffff;
+  padding: 16px;
+}
+
+nav a {
+  color: #ffffff;
+  margin-right: 12px;
+}
+
+section {
+  padding: 16px;
+}
+
+h2 {
+  color: #366da3;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.button {
+  display: inline-block;
+  background-color: #366da3;
+  color: #ffffff;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+footer {
+  background-color: #366da3;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+}
