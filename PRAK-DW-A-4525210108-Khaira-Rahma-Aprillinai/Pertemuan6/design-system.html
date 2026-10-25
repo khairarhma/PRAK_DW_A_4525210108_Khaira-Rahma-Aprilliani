@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Design System - Portal Akademik</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .ds { max-width: 1100px; margin: 0 auto; padding: var(--space-6) var(--space-4) var(--space-8); }
+      .ds section { margin-bottom: var(--space-7); }
+      .ds-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: var(--space-4); }
+      .swatch { border: 1px solid var(--neutral-200); border-radius: var(--radius-md); overflow: hidden; background: #fff; }
+      .swatch i { display: block; height: 64px; }
+      .swatch div { padding: var(--space-3); font-size: var(--fs-caption); }
+      .swatch b { display: block; font-size: var(--fs-small); }
+      .row { display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: center; }
+      .type-row { display: grid; grid-template-columns: 1fr 220px; gap: var(--space-4); align-items: baseline; padding: var(--space-3) 0; border-bottom: 1px solid var(--neutral-200); }
+      .space-row { display: flex; align-items: center; gap: var(--space-4); margin-bottom: var(--space-2); }
+      .space-row i { display: block; height: 16px; background: var(--primary-500); border-radius: 4px; }
+      .forms { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--space-5); }
+      @media (max-width: 700px) { .type-row { grid-template-columns: 1fr; gap: 0; } }
+    </style>
+  </head>
+  <body>
+    <main class="ds">
+      <header style="margin-bottom: var(--space-7)">
+        <p class="eyebrow">Design System</p>
+        <h1>Simple Design System: Portal Akademik</h1>
+        <p class="caption">Colors, typography, spacing, buttons, form controls, dan cards. <a href="index.html">Lihat penerapannya di Dashboard →</a></p>
+      </header>
+
+      <!-- COLORS -->
+      <section>
+        <p class="eyebrow">01</p><h2>Colors</h2>
+        <div class="ds-grid">
+          <div class="swatch"><i style="background:#3454d1"></i><div><b>Primary</b>#3454D1 · aksi utama</div></div>
+          <div class="swatch"><i style="background:#243da8"></i><div><b>Primary Dark</b>#243DA8 · hover</div></div>
+          <div class="swatch"><i style="background:#f59e0b"></i><div><b>Secondary / Accent</b>#F59E0B · aksen</div></div>
+          <div class="swatch"><i style="background:#172033"></i><div><b>Neutral 950</b>#172033 · sidebar</div></div>
+          <div class="swatch"><i style="background:#202634"></i><div><b>Neutral 900</b>#202634 · teks utama</div></div>
+          <div class="swatch"><i style="background:#697386"></i><div><b>Neutral 500</b>#697386 · teks sekunder</div></div>
+          <div class="swatch"><i style="background:#e4e8ef"></i><div><b>Neutral 200</b>#E4E8EF · border</div></div>
+          <div class="swatch"><i style="background:#f5f7fb"></i><div><b>Neutral 50</b>#F5F7FB · background</div></div>
+          <div class="swatch"><i style="background:#1a7f37"></i><div><b>Success</b>#1A7F37</div></div>
+          <div class="swatch"><i style="background:#9a6700"></i><div><b>Warning</b>#9A6700</div></div>
+          <div class="swatch"><i style="background:#c62839"></i><div><b>Danger</b>#C62839</div></div>
+          <div class="swatch"><i style="background:#2563a7"></i><div><b>Info</b>#2563A7</div></div>
+        </div>
+        <div class="row" style="margin-top: var(--space-4)">
+          <span class="status success">Success</span><span class="status warning">Warning</span>
+          <span class="status danger">Danger</span><span class="status info">Info</span>
+        </div>
+      </section>
+
+      <!-- TYPOGRAPHY -->
+      <section>
+        <p class="eyebrow">02</p><h2>Typography (Type Scale)</h2>
+        <p class="caption">Satu keluarga font: Inter, cadangan Segoe UI / Arial.</p>
+        <div class="type-row"><h1 style="margin:0">Title</h1><span class="caption">28px · Bold · line-height 1.25</span></div>
+        <div class="type-row"><h2 style="margin:0">Heading 2</h2><span class="caption">20px · Bold</span></div>
+        <div class="type-row"><h3 style="margin:0">Heading 3</h3><span class="caption">16px · Semibold</span></div>
+        <div class="type-row"><p style="margin:0">Body: teks isi untuk paragraf dan informasi.</p><span class="caption">16px · Regular · line-height 1.6</span></div>
+        <div class="type-row"><strong style="font-size:15px">BUTTON</strong><span class="caption">15px · Semibold</span></div>
+        <div class="type-row"><span class="caption">Caption</span><span class="caption">13px · Medium</span></div>
+      </section>
+
+      <!-- SPACING -->
+      <section>
+        <p class="eyebrow">03</p><h2>Spacing (kelipatan 4px)</h2>
+        <div class="space-row"><i style="width:4px"></i><span class="caption">space-1 · 4px</span></div>
+        <div class="space-row"><i style="width:8px"></i><span class="caption">space-2 · 8px</span></div>
+        <div class="space-row"><i style="width:12px"></i><span class="caption">space-3 · 12px</span></div>
+        <div class="space-row"><i style="width:16px"></i><span class="caption">space-4 · 16px</span></div>
+        <div class="space-row"><i style="width:24px"></i><span class="caption">space-5 · 24px</span></div>
+        <div class="space-row"><i style="width:32px"></i><span class="caption">space-6 · 32px</span></div>
+        <div class="space-row"><i style="width:48px"></i><span class="caption">space-7 · 48px</span></div>
+        <div class="space-row"><i style="width:64px"></i><span class="caption">space-8 · 64px</span></div>
+        <p class="caption">Radius: 8px (elemen kecil) dan 16px (card), mengikuti aturan outer = 2 × inner.</p>
+      </section>
+
+      <!-- BUTTONS -->
+      <section>
+        <p class="eyebrow">04</p><h2>Buttons</h2>
+        <div class="row">
+          <button class="btn btn-primary">Primary</button>
+          <button class="btn btn-secondary">Secondary</button>
+          <button class="btn btn-ghost">Ghost</button>
+          <button class="btn btn-danger">Danger</button>
+          <button class="btn btn-primary" disabled>Disabled</button>
+          <button class="btn btn-primary btn-sm">Small</button>
+        </div>
+      </section>
+
+      <!-- FORMS -->
+      <section>
+        <p class="eyebrow">05</p><h2>Form Controls</h2>
+        <div class="forms">
+          <div class="field"><label class="label" for="f1">Nama</label><input id="f1" class="input" placeholder="Nama lengkap" /><span class="hint">Default</span></div>
+          <div class="field"><label class="label" for="f2">NIM</label><input id="f2" class="input is-error" value="45252" /><span class="hint error">NIM harus 10 digit.</span></div>
+          <div class="field"><label class="label" for="f3">Semester</label><select id="f3" class="select"><option>Semester berjalan</option><option>Semester lalu</option></select></div>
+          <div class="field"><span class="label">Pilihan</span>
+            <label class="check"><input type="checkbox" checked /> Kirim pengingat KRS</label>
+            <label class="check"><input type="radio" name="r" checked /> Mahasiswa aktif</label>
+            <label class="check"><input type="radio" name="r" /> Cuti akademik</label>
+          </div>
+        </div>
+      </section>
+
+      <!-- CARDS -->
+      <section>
+        <p class="eyebrow">06</p><h2>Cards</h2>
+        <div class="ds-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--space-5)">
+          <div class="card"><h3>Card Default</h3><p class="caption">Border tipis dan shadow ringan untuk konten umum.</p></div>
+          <div class="card card-elevated"><h3>Card Elevated</h3><p class="caption">Shadow lebih tegas untuk konten yang perlu menonjol.</p></div>
+          <div class="card card-accent"><h3>Card Accent</h3><p class="caption">Garis kiri berwarna untuk informasi penting.</p></div>
+          <div class="stat-card"><span class="stat-label">IPK</span><strong class="stat-value">3.78</strong><span class="status success">Sangat Baik</span></div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

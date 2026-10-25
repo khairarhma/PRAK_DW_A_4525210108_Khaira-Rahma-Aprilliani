@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Mahasiswa</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="dashboard">
+      <!-- ==================================================
+                                SIDEBAR
+    ================================================== -->
+      <aside class="sidebar">
+        <div class="sidebar-brand">
+          <div class="logo">A</div>
+          <div>
+            <h2>Akademik</h2>
+            <span>Portal Mahasiswa</span>
+          </div>
+        </div>
+        <nav class="sidebar-menu">
+          <a href="#" class="active"> Dashboard </a>
+          <a href="#"> Jadwal Kuliah </a>
+          <a href="#"> KRS </a>
+          <a href="#"> Hasil Studi </a>
+          <a href="#"> Keuangan </a>
+          <a href="#"> Pengaturan </a>
+          <a href="design-system.html"> Design System </a>
+        </nav>
+      </aside>
+      <!-- ==================================================
+                                MAIN
+    ================================================== -->
+      <main class="main">
+        <!-- HEADER -->
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">DASHBOARD</p>
+            <h1>Selamat datang, Kava</h1>
+          </div>
+          <div class="topbar-actions">
+            <input class="input" type="search" placeholder="Cari mata kuliah…" aria-label="Cari mata kuliah" />
+            <div class="profile">
+            <img src="images/Profile.jpe" alt="Foto profil Kavaro Lysander" />
+            <div>
+              <strong> Khaira Rahma Aprilliani </strong>
+              <span> Mahasiswa </span>
+            </div>
+          </div>
+          </div>
+        </header>
+        <!-- ==================================================
+                                STATISTIK
+        ================================================== -->
+        <section class="stat-grid">
+          <div class="stat-card">
+            <span class="stat-label"> IPK </span>
+            <strong class="stat-value"> 3.78 </strong>
+            <span class="status success"> Sangat Baik </span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label"> SKS Ditempuh </span>
+            <strong class="stat-value"> 88 </strong>
+            <span class="stat-info"> dari 144 SKS </span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label"> Mata Kuliah </span>
+            <strong class="stat-value"> 7 </strong>
+            <span class="stat-info"> Semester berjalan </span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label"> Status </span>
+            <strong class="stat-value"> Aktif </strong>
+            <span class="status success"> Terdaftar </span>
+          </div>
+        </section>
+        <!-- ==================================================
+CONTENT
+================================================== -->
+        <div class="content-grid">
+          <!-- Jadwal -->
+          <section class="panel">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">PERKULIAHAN</p>
+                <h2>Jadwal Hari Ini</h2>
+              </div>
+              <button class="btn btn-secondary btn-sm">Lihat Semua</button>
+            </div>
+            <div class="schedule">
+              <div class="schedule-item">
+                <div class="schedule-time">
+                  <strong> 08:00 </strong>
+                  <span> 09:40 </span>
+                </div>
+                <div>
+                  <h3>Desain Web</h3>
+                  <p>Ruang Lab Komputer 1</p>
+                </div>
+              </div>
+              <div class="schedule-item">
+                <div class="schedule-time">
+                  <strong> 10:00 </strong>
+                  <span> 11:40 </span>
+                </div>
+                <div>
+                  <h3>Basis Data</h3>
+                  <p>Ruang 204</p>
+                </div>
+              </div>
+              <div class="schedule-item">
+                <div class="schedule-time">
+                  <strong> 13:00 </strong>
+                  <span> 14:40 </span>
+                </div>
+                <div>
+                  <h3>Pemrograman Web</h3>
+                  <p>Laboratorium Komputer 2</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Informasi -->
+          <aside class="panel">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">INFORMASI</p>
+                <h2>Pengumuman</h2>
+              </div>
+            </div>
+            <div class="notification">
+              <span class="status warning"> Penting </span>
+              <h3>Pengisian KRS</h3>
+              <p>
+                Pengisian KRS semester berikutnya dibuka pada 24 Agustus 2026.
+              </p>
+            </div>
+            <div class="notification">
+              <span class="status info"> Informasi </span>
+              <h3>Seminar Akademik</h3>
+              <p>
+                Seminar akademik akan dilaksanakan di auditorium universitas.
+              </p>
+            </div>
+          </aside>
+        </div>
+        <!-- ==================================================
+TABEL
+================================================== -->
+        <section class="panel table-panel">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow">AKADEMIK</p>
+              <h2>Mata Kuliah Semester Ini</h2>
+            </div>
+            <div class="panel-actions">
+              <select class="select" aria-label="Filter semester"><option>Semester berjalan</option><option>Semester lalu</option></select>
+              <button class="btn btn-primary btn-sm">Unduh KRS</button>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table>
+              <thead>
+                <tr>
+                  <th>Mata Kuliah</th>
+                  <th>SKS</th>
+                  <th>Dosen</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="Mata Kuliah">Desain Web</td>
+                  <td data-label="SKS">3</td>
+                  <td data-label="Dosen">Saka Wijaya</td>
+                  <td data-label="Status">
+                    <span class="status success"> Aktif </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-label="Mata Kuliah">Basis Data</td>
+                  <td data-label="SKS">3</td>
+                  <td data-label="Dosen">Maura Anastasya</td>
+                  <td data-label="Status">
+                    <span class="status success"> Aktif </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-label="Mata Kuliah">Pemrograman Web</td>
+                  <td data-label="SKS">3</td>
+                  <td data-label="Dosen">Sadib Satya</td>
+                  <td data-label="Status">
+                    <span class="status success"> Aktif </span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
