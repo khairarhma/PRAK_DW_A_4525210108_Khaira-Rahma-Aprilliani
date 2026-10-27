@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrasi Event - Workshop Web Development</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="page">
+    <header class="hero">
+      <p class="eyebrow">Workshop &middot; 15 November 2026</p>
+      <h1>Registrasi Event<br>Web Development Workshop</h1>
+      <p class="sub">Isi form di bawah untuk mengamankan kursimu. Semua kolom bertanda <span class="req">*</span> wajib diisi.</p>
+    </header>
+
+    <div id="success" class="success" role="status" hidden>
+      Pendaftaran berhasil dikirim (simulasi, belum terhubung ke server).
+    </div>
+
+    <form id="form" novalidate>
+
+      <!-- Data diri -->
+      <fieldset class="card">
+        <legend>Data Diri</legend>
+
+        <div class="field" data-field="nama">
+          <label for="nama">Nama lengkap <span class="req">*</span></label>
+          <input type="text" id="nama" name="nama" placeholder="Contoh: Budi Santoso" autocomplete="name">
+          <p class="error" id="err-nama" role="alert"></p>
+        </div>
+
+        <div class="grid-2">
+          <div class="field" data-field="email">
+            <label for="email">Email <span class="req">*</span></label>
+            <input type="email" id="email" name="email" placeholder="nama@email.com" autocomplete="email">
+            <p class="error" id="err-email" role="alert"></p>
+          </div>
+
+          <div class="field" data-field="hp">
+            <label for="hp">No. HP <span class="req">*</span></label>
+            <input type="tel" id="hp" name="hp" placeholder="081234567890" inputmode="numeric" autocomplete="tel">
+            <p class="error" id="err-hp" role="alert"></p>
+          </div>
+        </div>
+
+        <div class="field" data-field="tipe">
+          <span class="label" id="lbl-tipe">Tipe peserta <span class="req">*</span></span>
+          <div class="options" role="radiogroup" aria-labelledby="lbl-tipe">
+            <label class="opt"><input type="radio" name="tipe" value="mahasiswa"> Mahasiswa</label>
+            <label class="opt"><input type="radio" name="tipe" value="umum"> Umum</label>
+            <label class="opt"><input type="radio" name="tipe" value="alumni"> Alumni</label>
+          </div>
+          <p class="error" id="err-tipe" role="alert"></p>
+        </div>
+      </fieldset>
+
+      <!-- Detail event -->
+      <fieldset class="card">
+        <legend>Detail Event</legend>
+
+        <div class="field" data-field="sesi">
+          <label for="sesi">Pilih sesi <span class="req">*</span></label>
+          <select id="sesi" name="sesi">
+            <option value="">-- Pilih sesi --</option>
+            <option value="pagi">Sesi Pagi (09.00 - 12.00)</option>
+            <option value="siang">Sesi Siang (13.00 - 16.00)</option>
+          </select>
+          <p class="error" id="err-sesi" role="alert"></p>
+        </div>
+
+        <div class="field" data-field="topik">
+          <span class="label" id="lbl-topik">Topik yang diminati <span class="req">*</span> <small>(pilih 1&ndash;3)</small></span>
+          <div class="options" role="group" aria-labelledby="lbl-topik">
+            <label class="opt"><input type="checkbox" name="topik" value="html-css"> HTML &amp; CSS</label>
+            <label class="opt"><input type="checkbox" name="topik" value="javascript"> JavaScript</label>
+            <label class="opt"><input type="checkbox" name="topik" value="uiux"> UI/UX</label>
+            <label class="opt"><input type="checkbox" name="topik" value="laravel"> Laravel</label>
+          </div>
+          <p class="error" id="err-topik" role="alert"></p>
+        </div>
+
+        <div class="field" data-field="alasan">
+          <label for="alasan">Alasan mengikuti event <span class="req">*</span></label>
+          <textarea id="alasan" name="alasan" rows="4" placeholder="Ceritakan singkat kenapa kamu ingin ikut (min. 20 karakter)"></textarea>
+          <div class="meta"><p class="error" id="err-alasan" role="alert"></p><span class="counter" id="counter">0 / 300</span></div>
+        </div>
+
+        <div class="field" data-field="bukti">
+          <label for="bukti">Bukti pendaftaran / KTM <span class="req">*</span> <small>(JPG, PNG, atau PDF &middot; maks. 2 MB)</small></label>
+          <input type="file" id="bukti" name="bukti" accept=".jpg,.jpeg,.png,.pdf">
+          <p class="error" id="err-bukti" role="alert"></p>
+        </div>
+      </fieldset>
+
+      <div class="field agree" data-field="setuju">
+        <label class="opt"><input type="checkbox" id="setuju" name="setuju"> Saya menyatakan data di atas benar dan setuju dengan syarat &amp; ketentuan event. <span class="req">*</span></label>
+        <p class="error" id="err-setuju" role="alert"></p>
+      </div>
+
+      <div id="summary" class="summary" role="alert" hidden></div>
+
+      <div class="actions">
+        <button type="reset" class="btn ghost">Reset</button>
+        <button type="submit" class="btn">Daftar Sekarang</button>
+      </div>
+    </form>
+
+    <footer class="foot">Tugas Praktikum Pertemuan 7 &mdash; Desain Web A (Lab AI)</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
