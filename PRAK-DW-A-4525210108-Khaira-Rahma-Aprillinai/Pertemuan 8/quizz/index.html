@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daftar Voluntir</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="form-card">
+        <header class="form-header">
+          <span class="label-top"> PENDAFTARAN RELAWAN </span>
+          <h1>Daftar Voluntir</h1>
+          <p>
+            Bakti Masyarakat &amp; Gerakan Peduli Lingkungan. Lengkapi data
+            berikut dengan benar. Field bertanda * wajib diisi.
+          </p>
+        </header>
+
+        <form action="/proses-voluntir" method="post">
+          <!-- Nama Lengkap -->
+          <div class="form-group">
+            <label for="nama"> Nama Lengkap * </label>
+            <input
+              type="text"
+              id="nama"
+              name="nama"
+              placeholder="Contoh: Saipul Bahri"
+              minlength="3"
+              maxlength="60"
+              required
+            />
+            <small> Masukkan nama lengkap antara 3-60 karakter. </small>
+          </div>
+
+          <!-- Nomor Telepon -->
+          <div class="form-group">
+            <label for="telepon"> Nomor Telepon * </label>
+            <input
+              type="tel"
+              id="telepon"
+              name="telepon"
+              placeholder="Contoh: 081234567890"
+              pattern="[0-9]{10,13}"
+              minlength="10"
+              maxlength="13"
+              required
+            />
+            <small> Masukkan 10-13 digit angka tanpa spasi. </small>
+          </div>
+
+          <!-- Kategori Domisili / Wilayah -->
+          <div class="form-group">
+            <label for="domisili"> Kategori Domisili / Wilayah * </label>
+            <select id="domisili" name="domisili" required>
+              <option value="">-- Pilih Wilayah --</option>
+              <option value="kota-bogor">Kota Bogor</option>
+              <option value="kab-bogor">Kabupaten Bogor</option>
+              <option value="jakarta">Jakarta</option>
+              <option value="depok">Depok</option>
+              <option value="tangerang">Tangerang</option>
+              <option value="bekasi">Bekasi</option>
+              <option value="luar">Di luar Jabodetabek</option>
+            </select>
+          </div>
+
+          <!-- Pilihan Divisi Relawan (Radio Button) -->
+          <fieldset>
+            <legend>Pilihan Divisi Relawan *</legend>
+            <div class="option">
+              <input
+                type="radio"
+                id="logistik"
+                name="divisi"
+                value="logistik"
+                required
+              />
+              <label for="logistik"> Logistik </label>
+            </div>
+            <div class="option">
+              <input type="radio" id="humas" name="divisi" value="humas" />
+              <label for="humas"> Humas </label>
+            </div>
+            <div class="option">
+              <input
+                type="radio"
+                id="lapangan"
+                name="divisi"
+                value="lapangan"
+              />
+              <label for="lapangan"> Lapangan </label>
+            </div>
+          </fieldset>
+
+          <!-- Keahlian / Minat Khusus (Checkbox) -->
+          <fieldset>
+            <legend>Keahlian / Minat Khusus</legend>
+            <p class="instruction">Anda boleh memilih lebih dari satu.</p>
+            <div class="option">
+              <input
+                type="checkbox"
+                id="dokumentasi"
+                name="keahlian[]"
+                value="dokumentasi"
+              />
+              <label for="dokumentasi"> Dokumentasi </label>
+            </div>
+            <div class="option">
+              <input
+                type="checkbox"
+                id="p3k"
+                name="keahlian[]"
+                value="pertolongan-pertama"
+              />
+              <label for="p3k"> Pertolongan Pertama </label>
+            </div>
+            <div class="option">
+              <input
+                type="checkbox"
+                id="mengajar"
+                name="keahlian[]"
+                value="mengajar"
+              />
+              <label for="mengajar"> Mengajar </label>
+            </div>
+            <div class="option">
+              <input
+                type="checkbox"
+                id="lainnya"
+                name="keahlian[]"
+                value="lainnya"
+              />
+              <label for="lainnya"> Lainnya </label>
+            </div>
+          </fieldset>
+
+          <!-- Motivasi Bergabung (Textarea) -->
+          <div class="form-group">
+            <label for="motivasi"> Motivasi Bergabung * </label>
+            <textarea
+              id="motivasi"
+              name="motivasi"
+              rows="5"
+              minlength="20"
+              maxlength="300"
+              placeholder="Jelaskan alasan Anda ingin menjadi relawan..."
+              required
+            ></textarea>
+            <small> Tuliskan antara 20-300 karakter. </small>
+          </div>
+
+          <!-- Persetujuan Komitmen Relawan -->
+          <div class="agreement">
+            <input
+              type="checkbox"
+              id="komitmen"
+              name="komitmen"
+              value="setuju"
+              required
+            />
+            <label for="komitmen">
+              Saya bersedia mengikuti arahan koordinator dan bertanggung jawab
+              atas tugas yang saya pilih. *
+            </label>
+          </div>
+
+          <!-- Tombol -->
+          <div class="button-group">
+            <button type="submit" class="btn btn-primary">Daftar</button>
+            <button type="reset" class="btn btn-secondary">Reset</button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
